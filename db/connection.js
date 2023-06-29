@@ -1,9 +1,8 @@
-const mysql = require("mysq12");
+const mysql = require("mysql2");
 
-const connection =mysql.createConnection(
+const db =mysql.createConnection(
     {
         host: 'localhost',
-        dialect: 'mysql',
         port: 8889,
         user: 'root',
         password:"root",
@@ -11,4 +10,4 @@ const connection =mysql.createConnection(
     }
 );
 
-module.export = connection;
+module.exports = db;
